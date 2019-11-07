@@ -16,7 +16,7 @@ $(function() {
             }
             chrome.storage.sync.set({ 'total': newTotal }, function() {
                 console.log("@@@");
-                if (newTotal > limit) {
+                if (newTotal >= budget.limit) {
                     console.log("***");
                     var notifOptions = {
                         type: 'basic',
